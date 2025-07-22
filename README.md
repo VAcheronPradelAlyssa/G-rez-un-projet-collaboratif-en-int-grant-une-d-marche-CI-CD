@@ -25,7 +25,11 @@ Build the container:
 > docker build -t bobapp-front .  
 
 Start the container:
+# 1. Lancer le backend sur le port 8080
+docker run -p 8080:8080 --name bobapp-back -d bobapp-back
 
+# 2. Lancer le frontend sur le port 4200 (port Angular par défaut)  
+docker run -p 4200:4200 --name bobapp-front -d bobapp-front
 > docker run -p 8080:8080 --name bobapp-front -d bobapp-front
 
 ## Back-end
